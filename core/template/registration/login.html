@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+
+{% block title %}Login{% endblock %}
+{% block styles %}
+<style>
+  .text {
+    text-align: center;
+    padding-left: 7px;
+    padding-bottom: 10px;
+  }
+
+  .div_link_register {
+    margin-bottom: 20px;
+  }
+
+  .link_register {
+    text-decoration: none;
+  }
+</style>
+{% endblock %}
+{% block content %}
+<div class="card-header bg-dark text-white">
+  <p style="font-weight: bold; text-align: center; font-size: larger; padding: 5px;">Assistente IA</p>
+  <hr>
+  <p class="text">Acesse a sua conta e tire suas dúvidas com o nosso Assistente IA</p>
+</div>
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title text-center mb-4">Entre na sua conta</h5>
+          <hr>
+          <form method="post">
+            {% csrf_token %}
+            <div class="mb-3">
+              <label for="username" class="form-label">Usuário</label>
+              <input type="text" class="form-control" id="username" name="username" required>
+            </div>
+            <div class="mb-3">
+              <label for="password" class="form-label">Senha</label>
+              <input type="password" class="form-control" id="password" name="password" required>
+            </div>
+            <div class="div_link_register">
+              <a href="{% url 'register' %}" class="link_register">Não tem uma conta? Crie aqui.</a>
+            </div>
+            <div class="d-grid gap-2">
+              <button type="submit" class="btn btn-dark">Entrar</button>
+            </div>
+          </form>
+          {% if form.errors %}
+            <div class="alert alert-danger mt-4">
+              <ul class="mb-0">
+                {% for field in form %}
+                  {% for error in field.errors %}
+                    <li>{{ error }}</li>
+                  {% endfor %}
+                {% endfor %}
+                {% for error in form.non_field_errors %}
+                  <li>{{ error }}</li>
+                {% endfor %}
+              </ul>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
