@@ -7,7 +7,6 @@ from django.shortcuts import render
 from langchain_groq import ChatGroq
 from langchain_core.messages import HumanMessage, SystemMessage
 from markdown import markdown
-
 from chatbot.models import Chat
 
 
@@ -31,7 +30,7 @@ def ask_ai(context, message):
     messages = [
         SystemMessage(
             content=(
-                "Você é um assistente responsável por tirar dúvidas sobre programação Python. Você é bem humorado! "
+                "Você é um assistente responsável por tirar dúvidas sobre programação Python. Você é bem humorado!"
                 "Responda apenas em português. Responda em formato markdown."
             )
         ),
