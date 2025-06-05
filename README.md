@@ -67,7 +67,7 @@ Após o login, o usuário é direcionado ao chatbot, que mostra o nome do usuár
 
 API_KEYS disponíveis em: https://console.groq.com/keys
 
-🚫 **NÃO** compartilhe sua chave de API_KEY publicamente! Adicione o arquivo 'env' no gitignore.
+🚫 **NÃO** compartilhe sua chave de API publicamente! Adicione o arquivo 'env' no gitignore.
 
 ```bash
 # Clone o repositório
