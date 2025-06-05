@@ -1,10 +1,10 @@
 # Assistente IA
 
-**Assistente IA** é um projeto web desenvolvido com Django que integra uma Inteligência Artificial gratuita oferecida pela [Groq](https://groq.com). Ele oferece um chatbot funcional com sistema de autenticação, histórico de conversas por usuário e um painel administrativo estilizado com **Jazzmin**.
+**Assistente IA** é um projeto web desenvolvido com Django que integra uma Inteligência Artificial da Meta gratuita oferecida pela [Groq](https://groq.com). Ele oferece um chatbot funcional com sistema de autenticação, histórico de conversas por usuário e um painel administrativo estilizado com **Jazzmin**.
 
 ## :rocket: Funcionalidades
 
-- Integração com IA gratuita da Groq.
+- Integração com IA da Meta gratuita pela Groq.
 - Autenticação de usuários (login, cadastro e logout).
 - Validações no login:
   - Verifica se o usuário existe.
@@ -53,7 +53,7 @@ Após o login, o usuário é direcionado ao chatbot, que mostra o nome do usuár
 ## :gear: Tecnologias Utilizadas
 
 - Django
-- Groq (IA gratuita)
+- Llama3 (IA da Meta)
 - Jazzmin (Admin Panel)
 - Bootstrap 5
 - HTML5 + CSS3
@@ -70,7 +70,7 @@ cd assistente-ia
 
 # Crie o ambiente virtual
 python -m venv venv
-source venv/bin/activate  # ou venv\Scripts\activate no Windows
+source venv/bin/activate  # ou .\venv\Scripts\activate no Windows
 
 # Instale as dependências
 pip install -r requirements.txt
