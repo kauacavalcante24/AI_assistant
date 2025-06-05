@@ -63,6 +63,12 @@ Após o login, o usuário é direcionado ao chatbot, que mostra o nome do usuár
 
 ## :hammer: Como Rodar Localmente
 
+⚠️ **ATENÇÃO:** para o funcionamento da IA, você deve criar um arquivo chamado .env na pasta 'core'. No arquivo 'core/.env' você adiciona a API KEY da sua conta Groq da seguinte maneira: GROQ_API_KEY = 'api_key_cole_aqui'
+
+API_KEYS disponíveis em: https://console.groq.com/keys
+
+🚫 **NÃO** compartilhe sua chave de API_KEY publicamente! Adicione o arquivo 'env' no gitignore.
+
 ```bash
 # Clone o repositório
 git clone https://github.com/kauacavalcante24/AI_assistant.git
